@@ -15,7 +15,8 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "https://task-tracker-client-omega.vercel.app"
+  origin: "https://task-tracker-client-omega.vercel.app",
+  credentials: true
 }));
 
 app.use(express.json());
