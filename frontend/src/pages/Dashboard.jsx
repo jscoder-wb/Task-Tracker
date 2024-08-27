@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import TaskForm from '../components/TaskForm.jsx';
 import Spinner from '../components/Spinner.jsx';
-import { getTasks, reset } from '../reduxtoolkit/tasks/taskSlice.js';
+import { getTasks } from '../reduxtoolkit/tasks/taskSlice.js';
 import TaskItem from '../components/TaskItem.jsx';
 
 function Dashboard() {
@@ -26,10 +26,6 @@ function Dashboard() {
     }
 
     dispatch(getTasks());
-
-    return () => {
-      // dispatch(reset());
-    };
   }, [user, navigate, isError, message, dispatch]);
 
   if (isLoading) {
