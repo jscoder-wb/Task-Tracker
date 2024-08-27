@@ -137,5 +137,4 @@ export const taskSlice = createSlice({
   },
 });
 
-export const { reset } = taskSlice.actions;
 export default taskSlice.reducer;
