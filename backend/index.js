@@ -14,7 +14,9 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://task-tracker-client-omega.vercel.app"
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
